@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1>
+        Welcome to background changer 
+    </h1>
+</div>
+</body>
+<script>
+    let h=document.querySelector('h1');
+    h.style.marginTop='225px';
+    h.style.marginLeft='420px';
+    h.style.fontSize='34px';
+    let h1=document.querySelector('body')
+    h1.addEventListener('mousemove',func1);
+
+    function func1(e){
+        x=e.offsetX
+        y=e.offsetY
+        z=e.clientY
+        document.body.style.background=`rgb(${x},${x},${y})`
+        console.log('You triggered mouse move event')
+    }
+</script>
+</html>
